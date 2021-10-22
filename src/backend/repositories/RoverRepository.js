@@ -18,5 +18,4 @@ class RoverRepository {
         return body;
     }
 }
-
 export default RoverRepository;

@@ -1,5 +1,4 @@
 import RoverRepository from "../repositories/RoverRepository";
-
 const curiosityCameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"];
 const spiritOpportunityCameras = ["FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"];
 const rovers = ["curiosity", "opportunity", "spirit"];
@@ -20,6 +19,7 @@ class RoverService {
         };
         const query = RoverRepository.buildQuery(`${rover}/photos`, options);
         const result = await RoverRepository.doQuery(query);
+
         return result;
     }
     static async getAllImagesOnSol(rover, sol) {
