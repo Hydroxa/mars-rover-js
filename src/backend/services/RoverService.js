@@ -1,18 +1,17 @@
 import RoverRepository from "../repositories/RoverRepository";
+
+const curiosityCameras = ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"];
+const spiritOpportunityCameras = ["FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"];
+const rovers = ["curiosity", "opportunity", "spirit"];
 class RoverService {
     static getRoverCams(rover) {
         if (rover === "curiosity") {
-            return ["FHAZ", "RHAZ", "MAST", "CHEMCAM", "MAHLI", "MARDI", "NAVCAM"];
+            return curiosityCameras;
         } else {
-            return ["FHAZ", "RHAZ", "NAVCAM", "PANCAM", "MINITES"];
+            return spiritOpportunityCameras;
         }
     }
     static getRovers() {
-        const rovers = {
-            Curiosity: "curiosity",
-            Opportunity: "opportunity",
-            Spirit: "spirit",
-        };
         return rovers;
     }
     static async getAllImagesOnDate(rover, date) {
@@ -21,7 +20,6 @@ class RoverService {
         };
         const query = RoverRepository.buildQuery(`${rover}/photos`, options);
         const result = await RoverRepository.doQuery(query);
-
         return result;
     }
     static async getAllImagesOnSol(rover, sol) {
