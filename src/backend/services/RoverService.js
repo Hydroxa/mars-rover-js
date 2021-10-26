@@ -13,31 +13,9 @@ class RoverService {
     static getRovers() {
         return rovers;
     }
-    static async getAllImagesOnDate(rover, date) {
-        const options = {};
-		if (typeof date === "Date") {
-			options["earth_date"] = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-		} else {
-			options["sol"] = date;
-		}
-        const query = RoverRepository.buildQuery(`${rover}/photos`, options);
-        const result = await RoverRepository.doQuery(query);
-
-        return result;
-    }
     static async getAllImagesOnSol(rover, sol) {
         const options = {
             sol: sol,
-        };
-        const query = RoverRepository.buildQuery(`${rover}/photos`, options);
-        const result = await RoverRepository.doQuery(query);
-
-        return result;
-    }
-    static async getCameraOnDate(rover, date, camera) {
-        const options = {
-            earth_date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
-            camera: camera,
         };
         const query = RoverRepository.buildQuery(`${rover}/photos`, options);
         const result = await RoverRepository.doQuery(query);
