@@ -4,8 +4,9 @@
 	--font-family: 'Nunito', sans-serif;
 	--font-normal: 400;
 	--font-bold: 700;
-	--font-primary-color: #212121;
-	--font-secondary-color: #fff;
+	--primary-color: #212121;
+	--secondary-color: #fff;
+	--accent-color: #14103d;
 	--background-color: #dcdcdc;
 	--page-max-width: 1200px;
 }
