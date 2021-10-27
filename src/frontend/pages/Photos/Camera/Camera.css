@@ -1,0 +1,73 @@
+.slider {
+	appearance: none;
+	width: 80%;
+	height: 5px;
+	border-radius: 10px;
+	background: var(--grey-color);
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+	padding: 10px 24px;
+	margin-left: 1vw;
+	margin-top: auto;
+	margin-bottom: auto;
+	object-position: center;
+	display: block;
+}
+
+#sliderContainer {
+	object-position: center;
+	width: 35%;
+	display: block;
+	text-align: center left;
+}
+
+.backbutton {
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border: none;
+	background-color: var(--accent-color);
+	color: var(--grey-color);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 4vh;
+	margin-right: 1vw;
+}
+
+#controlPanel {
+	padding: 5px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 4vh;
+	border: 0px solid;
+	border-bottom-color: var(--accent-color);
+	border-bottom-width: 3px;
+	height:10vh; 
+	width:100vw;
+	position: fixed;
+	display: flex;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: var(--accent-color);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.slider::-moz-slider-thumb {
+	width: 25px;
+	height: 25px;
+	background: var(--accent-color);
+	cursor: pointer;
+	border-radius: 50%;
+}
