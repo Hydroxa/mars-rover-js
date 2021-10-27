@@ -11,6 +11,7 @@ function NavigationBar() {
                     <li><a href="http://localhost:3000/">Home</a></li>
                     <li><a href="http://localhost:3000/login">Login</a></li>
                     <li><a href="http://localhost:3000/photos">Photos</a></li>
+                    <li><a href="http://localhost:3000/quiz">Quiz</a></li>
                 </ul>
             </nav>
         </header>
