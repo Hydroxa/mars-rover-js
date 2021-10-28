@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
     body.email,
     passHash
   );
-  res.sendStatus(201)
+  res.sendStatus(201);
 });
 function checkExistance(name) {
   const search = database.any(
@@ -30,7 +30,7 @@ function checkExistance(name) {
   if (search === undefined) {
     return true;
   } else {
-    return true
+    return false;
   }
 }
 
