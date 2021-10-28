@@ -10,8 +10,6 @@ router.use("/login", LoginController);
 
 router.use("/registration", RegistrationController);
 router.use((_, res) => {
-    res.sendStatus(404);
   res.sendStatus(404);
 });
-
 export default router;
