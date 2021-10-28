@@ -7,8 +7,10 @@ const router = express.Router();
 
 router.use("/quotations", QuotationsController);
 router.use("/login", LoginController);
+
 router.use("/registration", RegistrationController);
 router.use((_, res) => {
+    res.sendStatus(404);
   res.sendStatus(404);
 });
 
