@@ -13,10 +13,12 @@ router.post("/", async (req, res) => {
         });
     }
     const isValid = await UserService.isUserValid(body.username, body.password);
+    const isAdmin = await UserService.isUserAnAdmin(body.username);
     if (isValid) {
         res.send({
             message: `Valid credentials. Welcome, ${body.username}`,
             token: createTokenForUser(body.username),
+            admin: isAdmin
         });
     } else {
         res.status(401).send({

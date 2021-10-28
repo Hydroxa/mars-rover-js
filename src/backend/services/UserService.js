@@ -19,7 +19,8 @@ export async function isUserValid(username, password) {
     return false;
 }
 
-export async function isUserAnAdmin (account) {
+export async function isUserAnAdmin (username) {
+    const account = await UserRepository.getFromName(username);
     if (account?.role_id === roles.admin) {
         return true;
     } else return false;
