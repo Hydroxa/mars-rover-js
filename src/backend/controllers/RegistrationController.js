@@ -11,9 +11,9 @@ router.post("/", async (req, res) => {
   const body = req.body;
   const passHash = UserService.hashString(body.password);
   try {
-    checkExistance(body.name)
+    checkExistance(body.name);
   } catch (error) {
-    res.send(errors)
+    console.log(error);
   }
   await UserRepository.addUserToDatabase(
     body.name,
@@ -21,16 +21,16 @@ router.post("/", async (req, res) => {
     body.email,
     passHash
   );
-
-  res.sendStatus(201);
+  res.sendStatus(201)
 });
-
 function checkExistance(name) {
-  const search = database.any(`SELECT username FROM users WHERE preferred_name = ${name}`)
-  if (name != search) {
+  const search = database.any(
+    `SELECT username FROM users WHERE preferred_name = '${name}'`
+  );
+  if (search === undefined) {
     return true;
   } else {
-    res.send("Username exists");
+    return true
   }
 }
 
