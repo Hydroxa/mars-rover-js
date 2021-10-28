@@ -51,12 +51,26 @@ h2 {
 	padding-top: 1.5vh;
 }
 
+.cameraList::-webkit-scrollbar {
+	display: none;
+}
+
 .cameraList {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: center;
 	margin-top: auto;
 	margin-bottom: 10px;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+
+.camerabutton {
+	display: inline-block;
+	background: var(--grey-color);
+	border: 0px;
+	border-left: 3px solid var(--translucent-black);
+	padding: 16px 32px;
 }
 /* 
 
