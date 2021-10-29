@@ -22,18 +22,15 @@ export default function Home() {
           NASA's Curiosity is the largest and most advanced rover ever sent to
           Mars. The car-sized rover is part of NASA's Mars Science Laboratory
           (MSL). Curiosity's ongoing mission is to study the ancient
-          habitability and the potential for life on Mars.
-          <ul>
-            The rover began its first drive on Mars Aug. 29, 2012. The rover is
-            about as tall as a basketball player and uses a 7-foot (2-meter) arm
-            to place tools close to rocks for study.
-          </ul>
+          habitability and the potential for life on Mars.The rover began its
+          first drive on Mars Aug. 29, 2012. The rover is about as tall as a
+          basketball player and uses a 7-foot (2-meter) arm to place tools close
+          to rocks for study.
         </p>
-        <strong>Key Dates:</strong>
         <p>
-          <b>Nov,26,2011:</b>launched
-          <b>Aug. 6, 2012:</b>Mars landing
-          <b>Aug. 29, 2012​:</b>Curiosity began its first drive
+          Key Dates:<p>Nov,26,2011:launched.</p>{" "}
+          <p>Aug. 6, 2012:Mars landing</p>{" "}
+          <p>Aug. 29, 2012​:Curiosity began its first drive</p>
         </p>
         <h2>What is Opportunity?</h2>
         <div className="OpportunityPic">
@@ -46,24 +43,14 @@ export default function Home() {
           and enduring interplanetary missions. Opportunity landed on Mars in
           early 2004 soon after its twin rover Spirit. Opportunity operated
           almost 15 years, setting several records and making a number of key
-          discoveries.
-          <ul>
-            Opportunity and its twin Spirit were tasked with studying sites on
-            Mars where conditions may once have been favorable for life.
-          </ul>
-          <ul>
-            Opportunity found evidence that Mars may once have been able to
-            sustain microbial life.
-          </ul>
-          <ul>
-            Opportunity exceeded its life expectancy by 60 times and had
-            traveled more than 28 miles (45 kilometers) by the time it reached
-            its appropriate final resting spot on Mars – Perseverance Valley.
-          </ul>
-          <ul>
-            Opportunity stopped communicating with Earth after a severe
-            Mars-wide dust storm blanketed its location in June 2018.
-          </ul>
+          discoveries.Opportunity and its twin Spirit were tasked with studying
+          sites on Mars where conditions may once have been favorable for life.
+          Opportunity found evidence that Mars may once have been able to
+          sustain microbial life. Opportunity exceeded its life expectancy by 60
+          times and had traveled more than 28 miles (45 kilometers) by the time
+          it reached its appropriate final resting spot on Mars – Perseverance
+          Valley.Opportunity stopped communicating with Earth after a severe
+          Mars-wide dust storm blanketed its location in June 2018.
         </p>
         <h2> What was Spirit?</h2>
         <div className="SpiritPic">
@@ -89,6 +76,27 @@ export default function Home() {
       setQuotation(response);
     } catch (e) {
       console.error(e);
+      return (
+        <>
+          <title>Mars Rover App</title>
+          <Header />
+          <main className="home-page page-container">
+            <h1>Mars Rover</h1>
+            <h2>Quotation of the day</h2>
+            <p className="quotation">{quotation?.text}</p>
+            <p className="attribution">—{quotation?.attribution}</p>
+          </main>
+        </>
+      );
+
+      async function getQuotationOfTheDay() {
+        try {
+          const response = await QuotationsApi.getQuotationOfTheDay();
+          setQuotation(response);
+        } catch (e) {
+          console.error(e);
+        }
+      }
     }
   }
 }
