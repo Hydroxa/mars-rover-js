@@ -1,141 +1,74 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .main-wrapper {
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 100vh;
-	width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .row {
-	display: flex;
-	justify-content: space-between;
-	height: 32vh;
-	width: 100%;
-	/* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    height: 32vh;
+    width: 100%;
+    /* border: 1px solid red; */
 }
 
 .box {
-	width: 50%;
-	padding: 7px;
-	padding-top: 10px;
-	/* border: 1px solid orange; */
+    width: 50%;
+    padding: 7px;
+    padding-top: 10px;
+    /* border: 1px solid orange; */
 }
 
 .box--accent {
-	background: var(--accent-color);
+    background: var(--accent-color);
 }
 
 .box--trans-black {
-	display: flex;
-	flex-direction: column;
-	background: var(--translucent-black);
+    display: flex;
+    flex-direction: column;
+    background: var(--translucent-black);
 }
 
 h1 {
-	font-size: 4vh;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	object-position: top center;
-	text-align: center;
+    font-size: 4vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    object-position: top center;
+    text-align: center;
 }
 
 h2 {
-	font-size: 3.5vh;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	object-position: top center;
-	text-align: left;
-	padding-top: 1.5vh;
+    font-size: 3.5vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    object-position: top center;
+    text-align: left;
+    padding-top: 1.5vh;
 }
 
 .cameraList::-webkit-scrollbar {
-	display: none;
+    display: none;
 }
 
 .cameraList {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: auto;
-	margin-bottom: 10px;
-	overflow: scroll;
-	scrollbar-width: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .camerabutton {
-	display: inline-block;
-	background: var(--grey-color);
-	border: 0px;
-	border-left: 3px solid var(--translucent-black);
-	padding: 16px 32px;
+    display: inline-block;
+    background: var(--grey-color);
+    border: 0px;
+    border-left: 3px solid var(--translucent-black);
+    padding: 16px 32px;
 }
-/* 
-
-.verticalFB {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	height:100vh;
-	width:100%;
-	justify-content: space-between;
-	padding: 20px;
-}
-.horizontalFB {
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: space-between;
-	height:100%;
-	display: flex;
-}
-
-.cameraList {
-	position: relative;
-	z-index: 0;
-	border: 0;
-	margin-bottom: 0;
-	bottom: 0;
-	padding: 0;
-	height: 60px;
-	width: 100%;
-	align-items: flex-start;
-	flex-direction: row;
-	margin-top: auto;
-	display: flex;
-
-}
-
-
-
-li {
-	width: 100%;
-	height: 32%;
-}
-
-
-
-.boxLight {
-	background-color: var(--translucent-black);
-}
-
-.boxDark {
-	background-color: var(--accent-color);
-}
-
-.box {
-	display: flex;
-	width: 50%;
-	height: 350px;
-}
-
-.box {
-	display: flex;
-	width: 50%;
-	height: 100%;
-	padding: 7px;
-	padding-top: 10px;
-}
-
-*/
