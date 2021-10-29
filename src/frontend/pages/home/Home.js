@@ -30,6 +30,7 @@ export default function Home() {
           of a planned 23-month primary mission, Curiosity met its major
           objective of finding evidence of a past environment well suited to
           supporting microbial life.
+          habitability and the potential for life on Mars.
         </p>
         <h2>What is Opportunity?</h2>
         <div className="OpportunityPic">
@@ -51,6 +52,10 @@ export default function Home() {
         <h2> What was Spirit?</h2>
         <div className="SpiritPic">
           <img src="\SpiritPic.jpg" alt="Spirit picture" />
+        </p>
+        <h2> What was Spirit?</h2>
+        <div className="SpiritPic">
+          <img src="\Spirit.jpg" alt="Spirit picture" />
         </div>
         <p>
           NASA's Spirit rover—and it's twin Opportunity—studied the history of
