@@ -30,3 +30,4 @@ export async function addToDatabase(text, attribution) {
   }
   return undefined;
 }
+
