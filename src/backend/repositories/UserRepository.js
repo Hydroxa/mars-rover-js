@@ -21,3 +21,11 @@ export async function get(id) {
 export async function getAll() {
     return await database.any(`SELECT * FROM ${databaseName}`);
 }
+
+export async function addUserToDatabase(name, username, email, passhash) {
+    await database.any(
+      `INSERT INTO ${databaseName} (preferred_name, username, email, passhash, role_id) VALUES ($1, $2, $3, $4, 1);`,
+      [name, username, email, passhash]
+    );
+}
+
