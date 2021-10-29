@@ -22,9 +22,8 @@ const Login = (properties) => {
       body: JSON.stringify(regDetails),
     })
     .then((response)=>{
-      console.log(response.status)
       if(response.status===201){
-        window.alert("Registration successfull \ngo to localhost:3000/login to login. :) \n", response.status)
+        window.alert("Registration successfull \nGo to localhost:3000/login to login. :) \n", response.status)
       }
     })
   };

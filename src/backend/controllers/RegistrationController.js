@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
   const body = req.body;
   const passHash = UserService.hashString(body.password);
   try {
-    checkExistance(body.name);
+    doesUserExist(body.name);
   } catch (error) {
     console.log(error);
   }
@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
   );
   res.sendStatus(201);
 });
-function checkExistance(name) {
+function doesUserExist(name) {
   const search = database.any(
     `SELECT username FROM users WHERE preferred_name = '${name}'`
   );
